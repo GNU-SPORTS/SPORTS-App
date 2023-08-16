@@ -58,7 +58,6 @@
 </details>
 
 ## 🚀 트러블 슈팅
-<details>
 <summary>
     
 <h3>🛠 트러블 슈팅 1</h3>
@@ -122,9 +121,9 @@ private val okHttpClient = OkHttpClient.Builder()
 
 ```
 </div>
-</details>
 
-<details>
+
+
 <summary>
 <h3>🛠 트러블 슈팅 2</h3>
 </summary>
@@ -227,4 +226,4 @@ private val launchEditor =
         }
 ```
 </div>
-</details>
+
