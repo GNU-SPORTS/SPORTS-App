@@ -149,8 +149,8 @@ private val okHttpClient = OkHttpClient.Builder()
 - 또한 글 검색을 할때 현재 페이지 글만 검색되는 오류 발견
 
 
-### To Solve**
-- 특정 글을 가져오는 API를 이용하여 모든 글을 가져올 수 있도록 함
+### To Solve
+- 특정 글을 가져오는 API를 이용하여 글을 하나씩 모든글 번호를 호출하여 RecyclerView로 보여줌
 - 스크롤을 내릴 때마다 글 하나씩 호출하여 계속해서 글을 가져옴
 - 모든 글 정보를 가져와서 page 처리하지 않고 특정 글 가져오는 api를 이용하여 메모리 낭비를 줄임
 
