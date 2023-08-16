@@ -53,7 +53,6 @@
 <h3>🛠 트러블 슈팅 1</h3>
 </summary>
 <div markdown="3">
-
 - **Problem & Reason**
 - 기존의 sharedprefernce 만 사용하는 방식
 ```
