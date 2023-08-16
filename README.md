@@ -62,11 +62,12 @@
 ```
 
 - **To Solve**
-
+</div>
 <details>
 <summary>
 <h3>🛠 트러블 슈팅 2</h3>
 </summary>
+<div markdown="4">
 - **Problem & Reason**
 - 커뮤니티 글 API를 호출할때 한번에 20개로 제한이 되어있어 페이지를 따로 만들어야하는 낭비가 생김
 - 또한 글 검색을 할때 현재 페이지 글만 검색되는 오류 발견
