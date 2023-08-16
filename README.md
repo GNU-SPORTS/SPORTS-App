@@ -10,7 +10,7 @@
 ### 주변정보,게시판,날씨,내정보
 | 주변정보 | 게시판 | 날씨 | 내정보 |
 | ------------ | ------------- |------------- |------------- |
-| ![Screenshot_20230814-203607_test](https://github.com/GNU-SPORTS/SPORTS-CLIENT-APP/assets/97229292/247867cb-4f0b-416a-ba39-18b7bd9a7908)| ![Screenshot_20230814-203614_test](https://github.com/GNU-SPORTS/SPORTS-CLIENT-APP/assets/97229292/0a91e2ff-12fe-4c18-bcb4-6a86edc1b7a8)|![Screenshot_20230814-203614_test](https://github.com/GNU-SPORTS/SPORTS-CLIENT-APP/assets/97229292/e88659aa-03f5-478b-9135-c0fb4eff48f4)| ![Screenshot_20230814-203621_test](https://github.com/GNU-SPORTS/SPORTS-CLIENT-APP/assets/97229292/f8701548-ac26-4518-8479-7989995e8a0a)|
+| ![Screenshot_20230814-203607_test](https://github.com/GNU-SPORTS/SPORTS-CLIENT-APP/assets/97229292/247867cb-4f0b-416a-ba39-18b7bd9a7908)| ![Screenshot_20230814-203614_test](https://github.com/GNU-SPORTS/SPORTS-CLIENT-APP/assets/97229292/0a91e2ff-12fe-4c18-bcb4-6a86edc1b7a8)|![Screenshot_20230814-203618_test](https://github.com/GNU-SPORTS/SPORTS-CLIENT-APP/assets/97229292/893fcd2c-7fc6-4488-9bc4-21f19ba52858)| ![Screenshot_20230814-203621_test](https://github.com/GNU-SPORTS/SPORTS-CLIENT-APP/assets/97229292/f8701548-ac26-4518-8479-7989995e8a0a)|
 
 ### 글 쓰기,글 정보,글 메뉴바,글 수정
 | 글 쓰기 | 글 정보 | 글 메뉴바 | 글 수정 |
