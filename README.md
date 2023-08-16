@@ -63,7 +63,7 @@
 
 - **To Solve**
 
-
+<details>
 <summary>
 <h3>🛠 트러블 슈팅 2</h3>
 </summary>
