@@ -57,7 +57,7 @@
 ### 
 | 날씨 | 
 | ------------ | 
-|![Screenshot_20230814-203618_test](https://github.com/GNU-SPORTS/SPORTS-CLIENT-APP/assets/97229292/893fcd2c-7fc6-4488-9bc4-21f19ba52858)| 
+|<img src="![Screenshot_20230814-203618_test](https://github.com/GNU-SPORTS/SPORTS-CLIENT-APP/assets/97229292/893fcd2c-7fc6-4488-9bc4-21f19ba52858)" width="200" height="200"/>| 
 
 </div>
 
