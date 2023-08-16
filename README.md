@@ -48,6 +48,7 @@
 ## 🚀 트러블 슈팅
 
 ### 🧑🏻‍💻 안드로이드
+
 <details>
 <summary>
 <h3>✨ 기술 1</h3>
@@ -73,6 +74,7 @@
 
 <details>
 <summary>
+    
 <h3>🛠 트러블 슈팅 1</h3>
 </summary>
 <div markdown="3">
