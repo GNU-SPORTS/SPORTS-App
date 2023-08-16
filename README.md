@@ -65,7 +65,7 @@
 <summary>
 <h3>✨ 기술 2</h3>
 </summary>
-<div markdown="1">
+<div markdown="2">
 
 - 기술 2
     - 
@@ -136,6 +136,8 @@ private val okHttpClient = OkHttpClient.Builder()
 
 ```
 </div>
+</details>
+
 <details>
 <summary>
 <h3>🛠 트러블 슈팅 2</h3>
