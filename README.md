@@ -50,6 +50,29 @@
 ### 🧑🏻‍💻 안드로이드
 <details>
 <summary>
+<h3>✨ 기술 1</h3>
+</summary>
+<div markdown="1">
+
+- 기술 1
+    - 
+
+</div>
+</details>
+
+<details>
+<summary>
+<h3>✨ 기술 2</h3>
+</summary>
+<div markdown="1">
+
+- 기술 2
+    - 
+</div>
+</details>
+
+<details>
+<summary>
 <h3>🛠 트러블 슈팅 1</h3>
 </summary>
 <div markdown="3">
@@ -213,3 +236,4 @@ private val launchEditor =
         }
 ```
 </div>
+</details>
