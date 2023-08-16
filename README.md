@@ -11,13 +11,10 @@
 ` Kotlin ` `GSON` `OkHttp` `RetrofitCoroutines` `JetPack` `Glide`   
 `AAC` `DataBinding` `LiveData` `Navigation` `Repository` `ViewModel`
 
-## ⚙️  Architecture
+## ⚙️ Architecture
 `MVVM`
 
-
-------------------------------------------
-
-
+## 👐 Result
 ### 로고,로그인,예약 홈,예약 화면
 | 로고 | 로그인 | 예약 홈 | 예약 화면 |
 | ------------ | ------------- |------------- |------------- |
