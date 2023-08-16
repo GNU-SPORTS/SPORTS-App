@@ -63,3 +63,112 @@
 
 - **To Solve**
 
+<h3>🛠 트러블 슈팅 2</h3>
+</summary>
+<div markdown="4">
+
+- **Problem & Reason**
+- 커뮤니티 글  호출할때 한번에 20개 제한
+```
+커뮤니티 글 API를 호출할때 한번에 20개로 제한이 되어있어 페이지를 따로 만들어야하는 낭비가 생김
+또한 글 검색을 할때 현재 페이지 글만 검색되는 오류 발견
+
+  @GET("post/readAll")
+    fun getPosts(
+        @Query("size") size: Int,
+        @Query("page") page: Int
+    ): Call<PostsResponse>
+
+
+```
+
+- **To Solve**
+- 특정 글을 가져오는 API를 이용하여 모든 글을 가져올 수 있도록 함
+- 스크롤을 내릴 때마다 글 하나씩 호출하여 계속해서 글을 가져옴
+- 모든 글 정보를 가져와서 page 처리하지 않고 특정 글 가져오는 api를 이용하여 메모리 낭비를 줄임
+
+PostViewmodel.kt
+  ```
+   private var page = 0;
+
+    suspend fun loadMore() {
+        if (isLoading.value) return
+        if (isLast) return
+
+        isLoading.value = true
+
+        val response = suspendCoroutine<PostsResponse> {
+            apiService.searchPosts("title", query.value, _sortType.value.value, 20, page)
+                .enqueue(object : Callback<PostsResponse> {
+                    override fun onResponse(
+                        call: Call<PostsResponse>,
+                        response: Response<PostsResponse>
+                    ) {
+                        it.resumeWith(Result.success(response.body() ?: PostsResponse().apply {
+                            last = true
+                        }))
+                    }
+
+                    override fun onFailure(call: Call<PostsResponse>, t: Throwable) {
+                        t.printStackTrace()
+
+                        it.resumeWith(Result.success(PostsResponse().apply {
+                            last = true
+                        }))
+                    }
+                })
+        }
+
+        isLoading.value = false
+
+        val result = if (page == 0) {
+            response.content
+        } else {
+            posts.value + response.content
+        }
+
+        page += 1
+        isLast = response.last
+        posts.emit(result)
+    }
+}
+
+enum class PostSortType(val value: String) {
+    LATEST("latest"),
+    OLDEST("oldest")
+}
+
+  ```
+Postfragment.kt
+```
+private val launchEditor =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == Activity.RESULT_OK) {
+                lifecycleScope.launch {
+                    viewModel.refresh()
+                }
+            }
+        }
+
+    private val launchViewer =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == Activity.RESULT_OK) {
+                val old: Post? = result.data?.getParcelableExtra("old")
+                val new: Post? = result.data?.getParcelableExtra("new")
+
+                if (old == null) return@registerForActivityResult
+
+                val posts = ArrayList(viewModel.posts.value)
+                val index = posts.indexOfFirst { it.id == old.id }
+                if (index >= 0) {
+                    if (new != null) {
+                        posts[index] = new;
+                    } else {
+                        posts.removeAt(index)
+                    }
+
+                    viewModel.posts.tryEmit(posts)
+                }
+            }
+        }
+```
