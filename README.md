@@ -55,7 +55,7 @@
 <div markdown="3">
   
 - **Problem & Reason**
-- 기존의 sharedprefernce 만 사용하는 방식
+- 기존의 sharedprefernce 만 사용하는 방식을 사용
 - 기존 방식은 토큰을 SharedPreferences에 저장하고 필요할 때마다 수동으로 토큰을 가져와 요청 헤더에 추가
 - 이로 인해 각각의 요청에서 토큰을 일일이 관리하고 추가해야 번거로움 있고코드 낭비가 심하다고 느낌
 
