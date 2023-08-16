@@ -1,10 +1,10 @@
 # Feat : 체육관 서비스 Ver 0.0.1
 ## 📱 Tech Stack
-` *Kotlin* ` `GSON` `OkHttp` RetrofitCoroutines,Glide
-AAC,DataBinding,LiveData,Navigation,Repository,ViewModel
+` Kotlin ` `GSON` `OkHttp` `RetrofitCoroutines` `Glide`
+`AAC` `DataBinding` `LiveData` `Navigation` `Repository` `ViewModel`
 
 ### ⚙️  Architecture
-MVVM
+`MVVM`
 
 ------------------------------------------
 ## 주요 서비스
