@@ -1,4 +1,11 @@
 # Feat : 체육관 서비스 Ver 0.0.1
+## 📱 Tech Stack
+Kotlin,GSON,OkHttp,RetrofitCoroutines,Glide
+AAC,DataBinding,LiveData,Navigation,Repository,ViewModel
+
+### ⚙️  Architecture
+MVVM
+
 ------------------------------------------
 ## 주요 서비스
 
@@ -26,4 +33,22 @@
 | 예약 홈 메뉴바 | 예약 내역 | 예약 내역 정보 | 
 | ------------ | ------------- |------------- |
 | ![Screenshot_20230814-203937_test](https://github.com/GNU-SPORTS/SPORTS-CLIENT-APP/assets/97229292/d841e47d-5eaf-4b90-bb64-e5c92975fc66)| ![Screenshot_20230814-203752_test](https://github.com/GNU-SPORTS/SPORTS-CLIENT-APP/assets/97229292/0ea45a27-b3a4-4726-be21-db0ab0d8f5fd)|![Screenshot_20230814-204112_test](https://github.com/GNU-SPORTS/SPORTS-CLIENT-APP/assets/97229292/6ce83cf6-3425-4bd2-9127-d285ffe29067)|
+
+## 🚀 트러블 슈팅
+
+### 🧑🏻‍💻 안드로이드
+<details>
+<summary>
+<h3>🛠 트러블 슈팅 1</h3>
+</summary>
+<div markdown="3">
+
+- **Problem & Reason**
+- 기존의 sharedprefernce 만 사용하는 방식
+```
+기존 방식은 토큰을 SharedPreferences에 저장하고 필요할 때마다 수동으로 토큰을 가져와 요청 헤더에 추가하였습니다 이로 인해 각각의 요청에서 토큰을 일일이 관리하고 추가해야 번거로움 있고
+코드 낭비가 심하다고 느낌
+```
+
+- **To Solve**
 
