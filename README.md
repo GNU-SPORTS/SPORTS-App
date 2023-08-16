@@ -8,7 +8,7 @@
 
 
 ## 📱 Tech Stack
-` Kotlin ` `GSON` `OkHttp` `RetrofitCoroutines` `Glide`   
+` Kotlin ` `GSON` `OkHttp` `RetrofitCoroutines` `JetPack` `Glide`   
 `AAC` `DataBinding` `LiveData` `Navigation` `Repository` `ViewModel`
 
 ## ⚙️  Architecture
