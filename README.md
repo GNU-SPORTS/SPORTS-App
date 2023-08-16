@@ -1,13 +1,24 @@
-# Feat : 체육관 서비스 Ver 0.0.1
+### Feat : 체육관 서비스 Ver 0.0.1   
+
+## 😄 Service introduce
+### 학교  스포츠 시설 예약 및 커뮤티니 플랫폼 
+- `로그인,회원가입`
+- `운동시설 예약, 예약 취소`
+- `커뮤니티 글쓰기,삭제,수정,댓글`
+- `현재위치 날씨정보`
+- `닉네임 변경 ,포인트 충전,내가 쓴 글,댓글 보기`
+
+
 ## 📱 Tech Stack
 ` Kotlin ` `GSON` `OkHttp` `RetrofitCoroutines` `Glide`   
 `AAC` `DataBinding` `LiveData` `Navigation` `Repository` `ViewModel`
 
-### ⚙️  Architecture
+## ⚙️  Architecture
 `MVVM`
 
+
 ------------------------------------------
-## 주요 서비스
+
 
 ### 로고,로그인,예약 홈,예약 화면
 | 로고 | 로그인 | 예약 홈 | 예약 화면 |
