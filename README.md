@@ -43,10 +43,11 @@
 | ------------ | ------------- |------------- |
 | ![Screenshot_20230814-203937_test](https://github.com/GNU-SPORTS/SPORTS-CLIENT-APP/assets/97229292/d841e47d-5eaf-4b90-bb64-e5c92975fc66)| ![Screenshot_20230814-203752_test](https://github.com/GNU-SPORTS/SPORTS-CLIENT-APP/assets/97229292/0ea45a27-b3a4-4726-be21-db0ab0d8f5fd)|![Screenshot_20230814-204112_test](https://github.com/GNU-SPORTS/SPORTS-CLIENT-APP/assets/97229292/6ce83cf6-3425-4bd2-9127-d285ffe29067)|
 
-## 🚀 트러블 슈팅
 
 ### 🧑🏻‍💻 안드로이드
 
+
+## 👍 특장점 기술
 <details>
 <summary>
 <h3>✨ 기술 1</h3>
@@ -70,6 +71,7 @@
 </div>
 </details>
 
+## 🚀 트러블 슈팅
 <details>
 <summary>
     
