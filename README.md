@@ -45,7 +45,6 @@
 
 
 ## 👍 특장점 기술
-<details>
 <summary>
 <h3>✨ 현재위치기반의 날씨 정보</h3>
 </summary>
@@ -61,7 +60,7 @@
 |![Screenshot_20230814-203618_test](https://github.com/GNU-SPORTS/SPORTS-CLIENT-APP/assets/97229292/893fcd2c-7fc6-4488-9bc4-21f19ba52858)| 
 
 </div>
-</details>
+
 
 ## 🚀 트러블 슈팅
 <summary>
