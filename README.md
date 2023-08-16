@@ -62,12 +62,12 @@
 ```
 
 - **To Solve**
+
 <details>
 <summary>
 <h3>🛠 트러블 슈팅 2</h3>
 </summary>
 <div markdown="4">
-
 - **Problem & Reason**
 - 커뮤니티 글  호출할때 한번에 20개 제한
 ```
