@@ -53,20 +53,70 @@
 <h3>🛠 트러블 슈팅 1</h3>
 </summary>
 <div markdown="3">
+  
 - **Problem & Reason**
 - 기존의 sharedprefernce 만 사용하는 방식
-```
-기존 방식은 토큰을 SharedPreferences에 저장하고 필요할 때마다 수동으로 토큰을 가져와 요청 헤더에 추가하였습니다 이로 인해 각각의 요청에서 토큰을 일일이 관리하고 추가해야 번거로움 있고
-코드 낭비가 심하다고 느낌
-```
+- 기존 방식은 토큰을 SharedPreferences에 저장하고 필요할 때마다 수동으로 토큰을 가져와 요청 헤더에 추가
+- 이로 인해 각각의 요청에서 토큰을 일일이 관리하고 추가해야 번거로움 있고코드 낭비가 심하다고 느낌
 
 - **To Solve**
+- Interceptor를 함께 사용하는 방식
+- Interceptor를 사용하면 네트워크 라이브러리에서 토큰 관련 작업을 자동으로 처리합니다
+- 각각의 네트워크 요청에서 토큰 추가 작업을 수동으로 하지 않아도 되며, 중복 코드를 줄이고 효율적으로 토큰 관리
+
+```
+private val okHttpClient = OkHttpClient.Builder()
+        .connectTimeout(5, TimeUnit.MINUTES)
+        .readTimeout(5, TimeUnit.MINUTES)
+        .writeTimeout(5, TimeUnit.MINUTES)
+        .addInterceptor(interceptor)
+        .addInterceptor(TokenInterceptor()) // Bearer 토큰 추출 및 요청 헤더에 추가
+        .addInterceptor(BearerTokenInterceptor())
+        .build()
+
+    val retrofit: Retrofit by lazy {
+        sharedManager = SharedManager.getInstance() // SharedManager 초기화
+        Retrofit.Builder()
+            .client(okHttpClient)
+            .baseUrl(BASE_URL)
+            .addConverterFactory(ScalarsConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+    }
+
+    fun getInstance(): Retrofit {
+        return retrofit
+    }
+
+    private class BearerTokenInterceptor : Interceptor {
+        @Throws(IOException::class)
+        override fun intercept(chain: Interceptor.Chain): Response {
+            val originalRequest = chain.request()
+
+            // Bearer 토큰 값 가져오기
+            val bearerToken = sharedManager.getBearerToken()
+
+            // Bearer 토큰이 존재하는 경우 요청 헤더에 추가
+            if (!bearerToken.isNullOrEmpty()) {
+                val modifiedRequest = originalRequest.newBuilder()
+                    .header("Authorization", "Bearer $bearerToken")
+                    .build()
+                return chain.proceed(modifiedRequest)
+            }
+            Log.d("BearerToken", bearerToken)
+            return chain.proceed(originalRequest)
+        }
+    }
+}
+
+```
 </div>
 <details>
 <summary>
 <h3>🛠 트러블 슈팅 2</h3>
 </summary>
 <div markdown="4">
+  
 - **Problem & Reason**
 - 커뮤니티 글 API를 호출할때 한번에 20개로 제한이 되어있어 페이지를 따로 만들어야하는 낭비가 생김
 - 또한 글 검색을 할때 현재 페이지 글만 검색되는 오류 발견
