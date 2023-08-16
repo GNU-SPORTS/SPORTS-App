@@ -54,12 +54,12 @@
 </summary>
 <div markdown="3">
   
-- **Problem & Reason**
+### Problem & Reason
 - 기존의 sharedprefernce 만 사용하는 방식을 사용
 - 기존 방식은 토큰을 SharedPreferences에 저장하고 필요할 때마다 수동으로 토큰을 가져와 요청 헤더에 추가
 - 이로 인해 각각의 요청에서 토큰을 일일이 관리하고 추가해야 번거로움 있고코드 낭비가 심하다고 느낌
 
-- **To Solve**
+### To Solve
 - Interceptor를 함께 사용하는 방식
 - Interceptor를 사용하면 네트워크 라이브러리에서 토큰 관련 작업을 자동으로 처리합니다
 - 각각의 네트워크 요청에서 토큰 추가 작업을 수동으로 하지 않아도 되며, 중복 코드를 줄이고 효율적으로 토큰 관리
@@ -117,12 +117,12 @@ private val okHttpClient = OkHttpClient.Builder()
 </summary>
 <div markdown="4">
   
-### **Problem & Reason**
+ **Problem & Reason**
 - 커뮤니티 글 API를 호출할때 한번에 20개로 제한이 되어있어 페이지를 따로 만들어야하는 낭비가 생김
 - 또한 글 검색을 할때 현재 페이지 글만 검색되는 오류 발견
 
 
-### **To Solve**
+**To Solve**
 - 특정 글을 가져오는 API를 이용하여 모든 글을 가져올 수 있도록 함
 - 스크롤을 내릴 때마다 글 하나씩 호출하여 계속해서 글을 가져옴
 - 모든 글 정보를 가져와서 page 처리하지 않고 특정 글 가져오는 api를 이용하여 메모리 낭비를 줄임
